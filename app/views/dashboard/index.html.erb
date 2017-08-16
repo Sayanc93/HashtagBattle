@@ -1,0 +1,9 @@
+<%= provide(:title, 'Dashboard') %>
+<div class="jumbotron container">
+  <% if current_user.hashtags.present? %>
+    <%= render partial: "dashboard/partials/battle_form" %>
+    </div>
+  <% else %>
+    <%= render partial: "dashboard/partials/create_hashtag" %>
+  <% end %>
+</div>

@@ -1,0 +1,32 @@
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <div class="control-group">
+      <label class="control-label">Add Hashtags to battle with!</label>
+      <div class="controls">
+        <%= form_tag(dashboard_path, method: :post) do %>
+            <div class="container">
+              <div class="input-group form-control">
+                  <%= text_field 'hashtags', nil, class: "form-control", required: true %>
+              </div>
+              <div class="entry input-group form-control">
+                  <%= text_field 'hashtags', nil, class: "form-control", required: true %>
+              </div>
+            </div>
+
+            <div class="container">
+              <div class="btn-group btn-group-justified" role="group">
+                <button class="btn btn-success btn-add glyphicon glyphicon-plus" type="button">
+                </button>
+                <button class="btn btn-danger btn-remove glyphicon glyphicon-minus" type="button">
+                </button>
+              </span>
+            </div>
+
+            <%= submit_tag "Submit", class:"btn btn-primary form-control"%>
+          <% end %>
+          <br>
+          <small>Press <span class="glyphicon glyphicon-plus gs"></span> to add another Hashtag</small>
+        </div>
+    </div>
+  </div>
+</div>

@@ -8,7 +8,11 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand page-scroll" href="/">Hashtag Battle</a>
+                <% if current_user %>
+                    <a class="navbar-brand page-scroll" href="/dashboard">Hashtag Battle</a>
+                <% else %>
+                    <a class="navbar-brand page-scroll" href="/">Hashtag Battle</a>
+                <% end %>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->

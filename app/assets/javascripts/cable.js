@@ -8,7 +8,7 @@
 (function() {
   this.App || (this.App = {});
 
-  // create consumer only when logged in
+  // Create consumer only when logged in.
   if (gon.current_user)
     App.cable = ActionCable.createConsumer();
 

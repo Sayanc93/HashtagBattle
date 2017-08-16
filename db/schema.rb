@@ -21,16 +21,8 @@ ActiveRecord::Schema.define(version: 20170815042108) do
     t.integer "count", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["name", "user_id"], name: "index_hashtags_on_name_and_user_id", unique: true
     t.index ["user_id"], name: "index_hashtags_on_user_id"
-  end
-
-  create_table "twitter_users", force: :cascade do |t|
-    t.string "uid", limit: 255
-    t.string "token"
-    t.string "secret"
-    t.string "name", limit: 255
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
